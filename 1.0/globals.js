@@ -57,3 +57,15 @@ var scoreboardFont = '20pt Helvetica';
 
 var lives = 2;
 var levels = 5;
+
+/* --------------------------------------- */
+/* Speeds */
+
+// How Fast Object Follows the Mouse
+var mouseFollowSpeed = 0.01;
+
+// How Fast Keys Accelerate object
+var keyAccelSpeed = 0.5;
+
+// Delay between modes
+var delayBetweenModes = 1500;
