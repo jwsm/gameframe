@@ -507,3 +507,9 @@ var randElement = function(arr) {
 	console.log(index);
 	return arr[index];
 }
+var getMouseX = function(e) {
+	return e.pageX - c.offsetLeft;
+}
+var getMouseY = function(e) {
+	return e.pageY - c.offsetTop;
+}
