@@ -59,16 +59,23 @@ function Sprite(){
 	this.bounce = function() {
 		if (this.x + this.size > width) {
 			this.dx = -this.dx;
+			this.didBounce();
 		}
 		if (this.x - this.size < 0) {
 			this.dx = -this.dx;
+			this.didBounce();
 		}
 		if (this.y + this.size > height) {
 			this.dy = -this.dy;
+			this.didBounce();
 		}
 		if (this.y - this.size < 0) {
 			this.dy = -this.dy;
+			this.didBounce();
 		}
+	}
+	// Did bounce
+	this.didBounce = function() {
 	}
 	// Draw shape
 	this.draw = function(){
