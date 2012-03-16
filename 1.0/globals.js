@@ -34,3 +34,26 @@ var deathTime = 150;
 
 // Messages (onscreen text)
 var maxMessages = 10;
+
+/* --------------------------------------- */
+/* Defaults that SHOULD be overridden in your game */
+
+/* --------------------------------------- */
+/* Colors */
+
+// Game Background Color
+var bgcolor = 'white';
+
+// Message Color
+var messageColor = 'black';
+var messageFont = '15pt Helvetica';
+
+// Scoreboard Text Color
+var scoreboardColor = 'black';
+var scoreboardFont = '20pt Helvetica';
+
+/* --------------------------------------- */
+/* Lives & Levels */
+
+var lives = 2;
+var levels = 5;
