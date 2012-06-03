@@ -357,6 +357,9 @@ function Game() {
 	// Start play mode
 	this.beginPlay = function() {
 		this.changeState(2);
+		if (window.beginPlay && typeof(window.beginPlay) === "function") {
+			window.beginPlay();
+		}
 	}
 	// Start win level mode
 	this.winLevel = function() {
