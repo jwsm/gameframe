@@ -13,7 +13,7 @@ function Sprite(){
 	this.isAvatar = false;
 	this.angle = 0;
 	this.followSpeed = 0;
-	
+
 	// Update the sprite each time tick(typically move and wrap/bounce)
 	this.update = function() {
 	}
@@ -34,7 +34,7 @@ function Sprite(){
 	}
 	this.forward = function(amount) {
 		this.y -= Math.cos(this.angle) * amount;
-      	this.x += Math.sin(this.angle) * amount;		
+      	this.x += Math.sin(this.angle) * amount;
 	}
 	this.backward = function(amount) {
 		this.y += Math.cos(this.angle) * amount;
@@ -92,7 +92,7 @@ function Sprite(){
 	this.drawIcon = function() {
 		if (this.image != null) {
 			cImg(this.image, this.size);
-		} else {	
+		} else {
 			cEllipse(this.size);
 		}
 	}
@@ -136,7 +136,7 @@ function Sprite(){
 	// Make the object fillow the mouse cursor
 	this.followMouse = function(e) {
 		this.dx = mouseFollowSpeed * (e.pageX - (this.x + c.offsetLeft));
-		this.dy = mouseFollowSpeed * (e.pageY - (this.y + c.offsetTop));	
+		this.dy = mouseFollowSpeed * (e.pageY - (this.y + c.offsetTop));
 		this.pointAt(
 			(e.pageX - (this.x + c.offsetLeft)),
 			(e.pageY - (this.y + c.offsetTop))
@@ -242,7 +242,7 @@ function ExplodePoint(shape) {
 	this.dx = shape.dx + (Math.random() * 30) - 15;
 	this.dy = shape.dy + (Math.random() * 30) - 15;
 	this.state = 1;
-	
+
 	this.move = function() {
 		if (this.state > 0) {
 			this.shrink();
@@ -403,7 +403,7 @@ function Scoreboard() {
 		ctx.save();
 		this.setScoreboardStyle();
 		ctx.textAlign = 'left';
-		ctx.translate(0, height);	
+		ctx.translate(0, height);
 		ctx.fillText(game.score, 20, -20);
 		ctx.fillText("L " + game.lives, 120, -20);
 		ctx.restore();
@@ -421,7 +421,7 @@ function Scoreboard() {
 		this.endScoreboardText();
 	}
 	this.drawLevelComplete = function() {
-		this.startScoreboardText();		
+		this.startScoreboardText();
 	    ctx.fillText('LEVEL COMPLETE', 0, 0);
 	    ctx.fillText('Score: ' + game.score, 0, 40);
 		this.endScoreboardText();
@@ -430,7 +430,7 @@ function Scoreboard() {
 		this.startScoreboardText();
 	    ctx.fillText('YOU WIN!!!', 0, 0);
 	    ctx.fillText('Score: ' + game.score, 0, 40);
-	    ctx.fillText('Reload to play again', 0, 80);			
+	    ctx.fillText('Reload to play again', 0, 80);
 		this.endScoreboardText();
 	}
 	this.startScoreboardText = function() {
@@ -478,7 +478,7 @@ function Scoreboard() {
 // ---------------------------------
 // Global Functions
 
-var clear = function(){  
+var clear = function(){
 	ctx.fillStyle = bgcolor;
 	rect(0, 0, width, height);
 	if (bgImage != null) {
@@ -489,10 +489,10 @@ var randColor = function(){
 	return Math.round(0xffffff * Math.random()).toString(16);
 }
 var ellipse = function(x, y, r){
-	ctx.beginPath();  
-	ctx.arc(x, y, r, 0, Math.PI * 2, true);  
-	ctx.closePath();  
-	ctx.fill();  
+	ctx.beginPath();
+	ctx.arc(x, y, r, 0, Math.PI * 2, true);
+	ctx.closePath();
+	ctx.fill();
 }
 var rect = function(x, y, w, h){
 	ctx.beginPath();
