@@ -397,6 +397,9 @@ function Game() {
 	this.addScore = function(value) {
 		this.score += value;
 	}
+	this.addLives = function(value) {
+		this.lives += value;
+	}
 }
 
 /*	Scoreboard
