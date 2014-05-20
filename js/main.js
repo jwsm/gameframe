@@ -18,6 +18,15 @@ var mainLoop = function(){
 	mLoop = setTimeout(mainLoop, 1000 / 50);
 }
 
+var backgroundMusic = function(music){
+	music.addEventListener('ended', function() {
+		this.currentTime = 0;
+		this.play();
+	}, false);
+	music.play();
+	music.volume = 0.5;
+}
+
 // ---------------------------------
 // Main
 
